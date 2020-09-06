@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: #333333;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 240px 80px;
+    grid-template-areas: "image" "text" "stats";
+
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    text-align: center;
+
+    transition: .5s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card-image{
+    grid-area: image;
+    background: url("./images/dragon-fruit.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text{
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date{
+    color: rgb(255, 7, 110);
+    font-size: 13px;
+}
+
+.card-text p{
+    color: gray;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-text h2{
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+.card-stats{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+}
+
+.card-stats .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.card-stats .type{
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card-stats .value{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats .border{
+    border-left: 1px solid rgb(172, 26, 87);
+    border-right: 1px solid rgb(172, 26, 87);
+}
+
+.card-stats .value sup{
+    font-size: 12px;
+}
+
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.two .card-text .date{
+    color: #cb4032;
+}
+
+.two .card-stats{
+    background: #cb4032;
+}
+
+.two .card-stats .border{
+    border-left: 1px solid rgb(183 37 22);
+    border-right: 1px solid rgb(183 37 22);
+}
+
+.two .card-image{
+    background: url("./images/strawberry.jpg");
+    background-size: cover;
+}
+
+.three .card-text .date{
+    color: #3e9c37;
+}
+
+.three .card-stats{
+    background: #3e9c37;
+}
+
+.three .card-stats .border{
+    border-left: 1px solid rgb(26 134 18);
+    border-right: 1px solid rgb(26 134 18);
+}
+
+.three .card-image{
+    background: url("./images/apple.jpg");
+    background-size: cover;
+}
